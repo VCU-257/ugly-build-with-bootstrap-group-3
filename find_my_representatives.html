@@ -19,14 +19,14 @@
         <div class="container-fluid">
             <div class="row vh-100">
                 <!-- left side of split page (search bar, filters, suggested profiles) -->
-                <div class="col-md-4 bg-primary text-white d-flex flex-column align-items-start justify-content-start border-end border-4">
+                <div class="col-md-4 bg-primary text-white d-flex flex-column h-100 overflow-hidden align-items-start justify-content-start border-end border-4">
                     <!-- search bar -->
                     <div class="my-3 w-100">
                         <label for="searchAddress" class="form-label">Address</label>
                         <input type="address" class="form-control" id="searchAddress" placeholder="Enter your address">
                     </div>
                     <!-- Search by -->
-                    <div class="d-flex flex-row gap-4 mt-2 mb-1"> <!-- ensures flex-column doesn't force single radio button per line -->
+                    <div class="d-flex flex-row flex-shrink-0 gap-4 mt-2 mb-1"> <!-- ensures flex-column doesn't force single radio button per line -->
                         <p>Search by:</p>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="searchBy" id="radioSearchByAddress" value="byAddress" checked>
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <!-- filters -->
-                    <div class="dropdown mb-3">
+                    <div class="dropdown flex-shrink-0 mb-3">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Filter Representatives</button>
                         <div class="dropdown-menu p-3" aria-labelledby="filterDropdown" style="min-width: 200px;">
 <!-- ToDo: Add JavaScript to allow Select All to work -->
@@ -61,9 +61,81 @@
                         </div>
                     </div>
                     <!-- Suggested Representative Profiles-->
+<!-- ToDo?: Maybe can use component for each card; need to connect to data -->
                     <div class="flex-grow-1 w-100 mt-5" style="overflow-y: auto; min-height: 0;">
-                        <h5 class="border-bottom pb-2">Suggested Profiles</h5>
-                        <div class="card bg-dark text-white mb-2 p-2">Representative 1</div>
+                        <h4 class="border-bottom sticky-top bg-primary pb-2" style="z-index: 1;">Suggested Profiles</h4>
+                        <div class="list-group">
+                            <div class="card bg-dark text-white mb-2 p-2">
+                                <div class="row g-0"> <!-- allows splitting of card, with 0 gutters -->
+                                    <div class="col-md-4">
+                                        <img src="Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Representative Name 2</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                            <p class="card-text">Blurb</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white mb-2 p-2">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Representative Name 3</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                            <p class="card-text">Blurb</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white mb-2 p-2">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Representative Name 4</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                            <p class="card-text">Blurb</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white mb-2 p-2">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Representative Name 5</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                            <p class="card-text">Blurb</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white mb-2 p-2">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Representative Name 6</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                            <p class="card-text">Blurb</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
