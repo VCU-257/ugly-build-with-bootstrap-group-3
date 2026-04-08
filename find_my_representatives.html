@@ -1,3 +1,5 @@
+<!-- ToDo: Should probably adjust so it scales with screen size -->
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -17,15 +19,46 @@
         <div class="container-fluid">
             <div class="row vh-100">
                 <!-- left side of split page (search bar, filters, suggested profiles) -->
-                <div class="col-md-4 bg-primary text-white d-flex align-items-start justify-content-center">
+                <div class="col-md-4 bg-primary text-white d-flex flex-column align-items-start justify-content-start">
                     <!-- search bar -->
                     <div class="my-3 w-100">
                         <label for="searchAddress" class="form-label">Address</label>
                         <input type="address" class="form-control" id="searchAddress" placeholder="Enter your address">
                     </div>
+                    <!-- Search by -->
+                    <div class="d-flex flex-row gap-4 mt-2 mb-1"> <!-- ensures flex-column doesn't force single radio button per line -->
+                        <p>Search by:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="searchBy" id="radioSearchByAddress" value="byAddress" checked>
+                            <label class="form-check-label" for="radioSearchByAddress">Address</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="searchBy" id="radioSearchByRepresentativeName" value="byRepresentativeName">
+                            <label class="form-check-label" for="radioSearchByRepresentativeName">Representative Name</label>
+                        </div>
+                    </div>
                     <!-- filters -->
-                    <div class="my-3 dropdown">
-                        a
+                    <div class="dropdown mb-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Filter Representatives</button>
+                        <div class="dropdown-menu p-3" aria-labelledby="filterDropdown" style="min-width: 200px;">
+<!-- ToDo: Add JavaScript to allow Select All to work -->
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="selectAll">
+                                <label class="form-check-label text-dark fw-bold" for="selectAll">Select All</label>
+                            </div>
+                            <hr class="dropdown-divider">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="senators" id="checkSenators">
+                                <label class="form-check-label text-dark" for="checkSenators">Senators</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="houseMembers" id="checkHouseMembers">
+                                <label class="form-check-label text-dark" for="checkHouseMembers">House Members</label>
+                            </div>
+                            <hr class="dropdown-divider">
+<!-- ToDo: Add JavaScript for using filtering; make sure to also close the dropdown menu after pressing it -->
+                            <button class="btn btn-sm btn-primary w-100" id="applyFiltersBtn">Apply Filters</button>
+                        </div>
                     </div>
                 </div>
 
