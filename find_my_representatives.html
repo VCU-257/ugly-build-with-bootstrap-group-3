@@ -19,7 +19,7 @@
         <div class="container-fluid">
             <div class="row vh-100">
                 <!-- left side of split page (search bar, filters, suggested profiles) -->
-                <div class="col-md-4 bg-primary text-white d-flex flex-column align-items-start justify-content-start">
+                <div class="col-md-4 bg-primary text-white d-flex flex-column align-items-start justify-content-start border-end border-4">
                     <!-- search bar -->
                     <div class="my-3 w-100">
                         <label for="searchAddress" class="form-label">Address</label>
@@ -59,6 +59,11 @@
 <!-- ToDo: Add JavaScript for using filtering; make sure to also close the dropdown menu after pressing it -->
                             <button class="btn btn-sm btn-primary w-100" id="applyFiltersBtn">Apply Filters</button>
                         </div>
+                    </div>
+                    <!-- Suggested Representative Profiles-->
+                    <div class="flex-grow-1 w-100 mt-5" style="overflow-y: auto; min-height: 0;">
+                        <h5 class="border-bottom pb-2">Suggested Profiles</h5>
+                        <div class="card bg-dark text-white mb-2 p-2">Representative 1</div>
                     </div>
                 </div>
 
