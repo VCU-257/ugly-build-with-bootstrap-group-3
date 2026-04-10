@@ -9,6 +9,7 @@ Representative page:
 ## 2. Bootstrap Implementation
 **Components Used:**
 * Breadcrumbs
+* Images
 
 ## 3. Technical Challenges & Solutions
 I faced the first risk, dealing with live (regularly updating) news, events, and sponsored bills. While I'm not sure if I can feasibly implement either 
