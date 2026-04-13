@@ -21,4 +21,4 @@ The main challenge was getting the layout inside each card to match the design. 
 I used ChatGPT to help with some issues I was having with the layout and formatting. I mainly used it to figure out how to structure the Bootstrap grid correctly and align elements inside the cards.
 
 ## 5. Live Site Link
-* **Live URL:** [Representatives List](file:///Users/cesar/Desktop/CMSC%20427/ugly-build-with-bootstrap-group-3/representatives_list.html)
+* **Live URL:** [Representatives List](https://vcu-257.github.io/ugly-build-with-bootstrap-group-3/representatives_list)
