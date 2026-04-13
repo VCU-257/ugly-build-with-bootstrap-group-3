@@ -6,6 +6,7 @@ Find My Representative Page parts:
 * Filters
 * Suggested profiles
 * (Accidentally) Scroll feature for just the suggested profiles
+* (Extra) Deployment and fixing problems with connections between pages
 
 ## 2. Bootstrap Implementation
 **Components Used:**
